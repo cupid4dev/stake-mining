@@ -1,6 +1,6 @@
 var BTC_PRICE = 48839.30;
 
-function handleBetAmountChange(event){
+function handleBetAmountInput(event){
     let betAmount = event.target.value;
     if(betAmount == "") {
         betAmount = 0.0
@@ -8,6 +8,17 @@ function handleBetAmountChange(event){
 
     const elementBtcShow = document.querySelector('[data-testid="conversion-amount"]');
     elementBtcShow.innerHTML = "" + (betAmount / BTC_PRICE).toFixed(8) + " BTC";
+}
+
+function handleBetAmountChange(event){
+    console.log("asdf");
+    let betAmount = event.target.value;
+    if(betAmount == "") {
+        betAmount = 0.00
+    }
+
+    const elementInput = document.querySelector('[data-test="input-game-amount"]');
+    elementInput.value = "" + parseFloat(betAmount).toFixed(2);
 }
 
 function handleBetAmountIncrease() {
@@ -18,7 +29,7 @@ function handleBetAmountIncrease() {
     }
     betAmount *= 2;
 
-    elementInput.value = betAmount;
+    elementInput.value = "" + parseFloat(betAmount).toFixed(2);;
     const elementBtcShow = document.querySelector('[data-testid="conversion-amount"]');
     elementBtcShow.innerHTML = "" + (betAmount / BTC_PRICE).toFixed(8) + " BTC";
 }
@@ -31,7 +42,7 @@ function handleBetAmountDecrease() {
     }
     betAmount /= 2;
 
-    elementInput.value = betAmount;
+    elementInput.value = "" + parseFloat(betAmount).toFixed(2);;
     const elementBtcShow = document.querySelector('[data-testid="conversion-amount"]');
     elementBtcShow.innerHTML = "" + (betAmount / BTC_PRICE).toFixed(8) + " BTC";
 }
