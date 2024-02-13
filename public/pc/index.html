@@ -241,6 +241,8 @@
   <link rel="alternate" hreflang="fi" href="https://stake.com/fi/casino/games/mines">
   <link rel="alternate" hreflang="ar" href="https://stake.com/ar/casino/games/mines">
   <!-- HTML_TAG_START --><!-- HTML_TAG_END -->
+  <script crossorigin="" src="../js/custom.js"></script>
+  <script crossorigin="" src="../js/index.2658df49.js"></script>
   <script type="text/javascript" async=""
     src="./Mines Gambling Game - Play Casino Games Online at Stake_files/analytics.js.download"></script>
   <script type="text/javascript" async=""
@@ -728,6 +730,8 @@
   <link rel="modulepreload" as="script" crossorigin="" href="https://stake.com/_app/immutable/chunks/index.809bb91f.js">
   <link rel="modulepreload" as="script" crossorigin="" href="https://stake.com/_app/immutable/chunks/index.81f0e6be.js">
   <link rel="modulepreload" as="script" crossorigin="" href="https://stake.com/_app/immutable/chunks/index.1f348e38.js">
+  
+  
   <style>
     #optimoveSdkWebTool {
       width: 0;
@@ -1641,17 +1645,17 @@
                                                         fill="#1B3802">
                                                       </path>
                                                     </svg>
-                                                  </div> <input autocomplete="on"
+                                                  </div> <input autocomplete="on" value="0.00" oninput="handleBetAmountChange(event)"
                                                     class="input spacing-expanded svelte-3axy6s" type="number"
                                                     data-test="input-game-amount" data-bet-amount-active-currency="btc"
                                                     step="1e-8">
                                                 </div>
                                                 <div class="input-button-wrap svelte-3axy6s"><button
                                                     data-test="amount-halve" data-testid="amount-halve"
-                                                    class="button variant-neutral size-sm align-left no-shadow svelte-1pcg5q8">
+                                                    class="button variant-neutral size-sm align-left no-shadow svelte-1pcg5q8" onclick="handleBetAmountDecrease()">
                                                     <span class="content-or-loader svelte-kgkwgo">½</span> </button>
                                                   <button data-test="amount-double" data-testid="amount-double"
-                                                    class="button variant-neutral size-sm align-left no-shadow svelte-1pcg5q8">
+                                                    class="button variant-neutral size-sm align-left no-shadow svelte-1pcg5q8" onclick="handleBetAmountIncrease()">
                                                     <span class="content-or-loader svelte-kgkwgo">2×</span> </button>
                                                 </div>
                                               </div> <span class="label-content full-width svelte-1vx6ykn">
